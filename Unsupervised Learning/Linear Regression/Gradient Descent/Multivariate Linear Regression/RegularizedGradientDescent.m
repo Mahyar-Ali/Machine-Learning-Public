@@ -1,4 +1,4 @@
-function [theta, J_history] = NormalizedGradientDescent(X, y, theta, alpha,lambda, num_iters)
+function [theta, J_history] = RegularizedGradientDescent(X, y, theta, alpha,lambda, num_iters)
 %GRADIENTDESCENTMULTI Performs gradient descent to learn theta
 %   theta = GRADIENTDESCENTMULTI(x, y, theta, alpha, num_iters) updates theta by
 %   taking num_iters gradient steps with learning rate alpha
