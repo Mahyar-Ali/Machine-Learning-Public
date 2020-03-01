@@ -23,7 +23,7 @@ for iter = 1:num_iters
       
       theta(1) = theta(1) - partial_derivatives_matrix(1).*(alpha*(1/m));
      
-      theta([2 size(theta)],:) = theta([2 size(theta)],:).*(1-alpha*(lambda/m)) - partial_derivatives_matrix([2 size(theta)],:).*(alpha*(1/m));
+      theta(2:size(theta)) = theta(2:size(theta)).*(1-alpha*(lambda/m)) - partial_derivatives_matrix(2:size(theta)).*(alpha*(1/m));
 
 
     % ============================================================
