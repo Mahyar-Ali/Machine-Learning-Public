@@ -11,12 +11,13 @@ num_labels_2 = size(Theta2, 1);
 % You need to return the following variables correctly 
 p = zeros(size(X, 1), 1);
 X = [ones(m, 1) X];
-size(X)
-size(Theta1)
+
+% To compute values of each neuron in the hidden layer.
 z = X*Theta1';
 one = ones (size(X,1),num_labels_1);
 sigmoid_1 = one./(1+exp(-z));
 
+%To compute sigmoid the final weight of each neuron in the last layer w.r.t each training example
 sigmoid_1 = [ones(size(sigmoid_1,1),1) sigmoid_1]
  size(sigmoid_1);
  X = [ones(m, 1) X];
@@ -24,17 +25,8 @@ sigmoid_1 = [ones(size(sigmoid_1,1),1) sigmoid_1]
  one = ones (size(sigmoid_1,1),num_labels_2);
  sigmoid_2 = one./(1+exp(-z));
 
-% ====================== YOUR CODE HERE ======================
-% Instructions: Complete the following code to make predictions using
-%               your learned neural network. You should set p to a 
-%               vector containing labels between 1 to num_labels.
-%
-% Hint: The max function might come in useful. In particular, the max
-%       function can also return the index of the max element, for more
-%       information see 'help max'. If your examples are in rows, then, you
-%       can use max(A, [], 2) to obtain the max for each row.
-%
-
+%=================================================================================
+  % return the index of those element in each row which has the largest probability.
          [temp p] = max(sigmoid_2,[],2);
-         
+%=================================================================================         
 end
