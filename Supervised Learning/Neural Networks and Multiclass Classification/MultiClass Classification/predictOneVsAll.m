@@ -16,22 +16,18 @@ p = zeros(size(X, 1), 1);
 
 % Add ones to the X data matrix
 X = [ones(m, 1) X];
+%To compute the sigmoid of all training examples with respect to all classes.
 z = X*all_theta';
 one = ones (size(X,1),num_labels);
 sigmoid = one./(1+exp(-z));
 
-% ====================== YOUR CODE HERE ======================
+% ====================== Main Logic ======================
 % Instructions: Complete the following code to make predictions using
 %               your learned logistic regression parameters (one-vs-all).
 %               You should set p to a vector of predictions (from 1 to
 %               num_labels).
-%
-% Hint: This code can be done all vectorized using the max function.
-%       In particular, the max function can also return the index of the 
-%       max element, for more information see 'help max'. If your examples 
-%       are in rows, then, you can use max(A, [], 2) to obtain the max 
-%       for each row.
-        [temp p] = max(sigmoid,[],2)
+
+        [temp p] = max(sigmoid,[],2) % return the index of those element in each row which has the largest probability.
 
 %       
 
