@@ -30,7 +30,7 @@ J = 0;
 Theta1_grad = zeros(size(Theta1));
 Theta2_grad = zeros(size(Theta2));
 
-% ====================== YOUR CODE HERE ======================
+% ====================== Main Logic ======================
 % Instructions: You should complete the code by working through the
 %               following parts.
 %
