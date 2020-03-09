@@ -1,0 +1,8 @@
+% For gaussian Kernel
+
+% Train the SVM
+model = svmTrain(X, y, C, @(x1, x2)gaussianKernel(x1, x2, sigma));
+
+% For linear Kernel
+model = svmTrain(X, y, C, @linearKernel, 1e-3, 20);
+
