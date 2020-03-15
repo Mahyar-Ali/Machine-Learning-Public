@@ -19,7 +19,7 @@
 
 
 ================================== Note =======================================
-
+Certificate: https://coursera.org/share/34ad92e662c6ad29904b6c7d218bbaeb
 ................................Thank you Andrew Ng. !
 ................................Regards: M.Mehyar Ali\
 
